@@ -1,0 +1,42 @@
+# Backend
+backend/.venv/
+backend/__pycache__/
+backend/**/__pycache__/
+backend/*.egg-info/
+backend/.env
+backend/firebase-service-account.json
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+frontend/.env
+
+# General
+.DS_Store
+*.log
+.idea/
+.vscode/settings.json
+
+# Temporary files
+.tmp/
+*.tmp
+
+# Firebase service account (redundant but explicit)
+*firebase-adminsdk*.json
+tailormade-coloring-book-firebase-adminsdk-*.json
+
+# Brain/AI artifacts (optional - comment out if you want to commit these)
+# .gemini/
+
+# Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/

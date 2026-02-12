@@ -1,0 +1,48 @@
+### TailorMade Coloring Book — REST Client
+### Install "REST Client" extension in VSCode, then click "Send Request"
+
+@baseUrl = http://localhost:8000
+@token = YOUR_FIREBASE_ID_TOKEN_HERE
+
+### Health Check
+GET {{baseUrl}}/health
+
+###
+
+### Get Current User
+GET {{baseUrl}}/api/v1/auth/me
+Authorization: Bearer {{token}}
+
+###
+
+### Generate a Book (main pipeline)
+POST {{baseUrl}}/api/v1/books/generate
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "title": "Luna and the Magic Forest",
+  "theme": "A small bunny named Luna discovers a glowing mushroom that leads her to a hidden fairy village",
+  "page_count": 4,
+  "age_range": "6-9",
+  "art_style": "standard",
+  "character_name": "Luna"
+}
+
+###
+
+### List My Books (gallery)
+GET {{baseUrl}}/api/v1/books/
+Authorization: Bearer {{token}}
+
+###
+
+### Get Single Book
+GET {{baseUrl}}/api/v1/books/REPLACE_WITH_BOOK_ID
+Authorization: Bearer {{token}}
+
+###
+
+### Photo Upload (Phase 2 - returns 501)
+POST {{baseUrl}}/api/v1/photos/upload
+Authorization: Bearer {{token}}

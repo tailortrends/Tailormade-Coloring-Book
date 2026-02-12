@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Nunito', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Fredoka One', cursive;
+  }
+
+  /* Enforce minimum tap targets throughout — critical for kids */
+  button,
+  a,
+  [role="button"] {
+    min-height: 48px;
+    min-width: 48px;
+  }
+}
+
+@layer components {
+  /* Kid button — bouncy, rounded, big */
+  .btn-kid {
+    @apply btn rounded-full font-display text-lg font-bold
+           transition-transform duration-150 active:scale-95
+           min-h-[48px] px-6;
+  }
+
+  /* Card with friendly radius */
+  .card-kid {
+    @apply card bg-base-100 rounded-4xl shadow-lg border-2 border-base-300;
+  }
+
+  /* Page canvas container */
+  .canvas-wrapper {
+    @apply rounded-3xl overflow-hidden shadow-2xl border-4 border-base-300 bg-white;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Fredoka One', cursive;
+  }
+}
